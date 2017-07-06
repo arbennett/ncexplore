@@ -3,7 +3,6 @@
 import os
 import sys
 import dash
-import plotly.graph_objs as go
 import ncexplore as nce
 
 
@@ -17,4 +16,3 @@ if __name__ == '__main__':
     ds = app_data.data
     nce.initialize_callbacks(app, app_data.data)
     app.run_server()
-

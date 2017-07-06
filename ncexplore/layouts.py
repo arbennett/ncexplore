@@ -54,7 +54,10 @@ def initialize_layout(ds):
             ]
     spatial = html.Div(children=spatial_elements)
 
-    timeseries = html.Div(children=html.H1(children='timeseries plots here'))
+    timeseries_elements = [
+            html.H1(children='timeseries plots here'),
+            dcc.Graph(id='timeseries-plot')]
+    timeseries = html.Div(children=timeseries_elements)
 
     plots_div = html.Div(id='plot-pane',
                          style={'width': '45%', 'float': 'right'},

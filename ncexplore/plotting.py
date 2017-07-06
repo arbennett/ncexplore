@@ -28,10 +28,13 @@ def contour(z: np.array, x: np.array=None, y: np.array=None,
 
 def heatmap(z: np.array, x: np.array=None, y: np.array=None,
             cmap='viridis'):
-
     heatmap = go.Heatmap(
         x=x, y=y,  z=z,
         colorscale=convert_colormap(cmap)
     )
     return [heatmap]
 
+
+def timeseries(x, y):
+    timeseries = go.Scatter(x=x, y=y, mode='lines+markers')
+    return [timeseries]
