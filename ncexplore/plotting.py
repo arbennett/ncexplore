@@ -16,7 +16,7 @@ def convert_colormap(cmap_name: str):
 
 
 def contour(z: np.array, x: np.array=None, y: np.array=None,
-            cmap='viridis', ncontours=18):
+            cmap='viridis', ncontours=10):
     contour = go.Contour(
         x=x, y=y,  z=z,
         contours={'coloring': 'heatmap'},

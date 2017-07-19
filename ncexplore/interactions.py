@@ -21,7 +21,7 @@ def initialize_callbacks(app, ds):
              Input('spatial-plot', 'clickData')])
     def build_timeseries_plot(var, clickData):
         clickData = clickData['points'][0]
-        ydata = ds.sel(x=clickData['x'], y=clickData['y'])[var].values
+        ydata = ds.isel(lat=clickData['x'], lon=clickData['y'])[var].values
         print(ydata)
         d = nce.plotting.timeseries(x=ds.time.values, y=ydata)
         print(d)
